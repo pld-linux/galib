@@ -1,4 +1,4 @@
-Summary:	A C++ Library of Genetic Algorithm Components
+Summary:	A C++ library of genetic algorithm components
 Summary(pl):	Biblioteka C++ funkcji do algorytmów genetycznych
 Name:		galib
 Version:	246

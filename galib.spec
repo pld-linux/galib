@@ -7,6 +7,7 @@ Release:	0.1
 License:	MIT (base library), GPL (GNU portions in examples)
 Group:		Libraries
 Source0:	http://lancet.mit.edu/ga/dist/%{name}%{version}.tgz
+Patch0:		%{name}%{version}_gcc4.patch
 # Source0-md5:	e61efce22161907449b07f8472eb7c7c
 URL:		http://lancet.mit.edu/ga/
 BuildRequires:	libstdc++-devel
@@ -57,6 +58,7 @@ Statyczna wersja biblioteki GAlib.
 
 %prep
 %setup -q -n %{name}%{version}
+%patch0 -p1
 
 %build
 %{__make} -C ga \

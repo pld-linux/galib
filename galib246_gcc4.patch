@@ -1,20 +1,6 @@
-diff -ruN galib246/ga/GAAllele.h galib246_patche/ga/GAAllele.h
---- galib246/ga/GAAllele.h	2004-12-29 17:26:38.000000000 +0100
-+++ galib246_patche/ga/GAAllele.h	2005-03-14 16:56:26.000000000 +0100
-@@ -144,8 +144,8 @@
-   friend operator==(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
-   friend operator!=(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
- #elif defined(GALIB_USE_EMPTY_TEMPLATES)
--  friend int operator==<>(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
--  friend int operator!=<>(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
-+  friend int operator==<T>(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
-+  friend int operator!=<T>(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
- #elif defined(GALIB_USE_NAMED_TEMPLATES)
-   friend int operator==<T>(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
-   friend int operator!=<T>(const GAAlleleSet<T> &, const GAAlleleSet<T> &);
-diff -ruN galib246/ga/gaconfig.h galib246_patche/ga/gaconfig.h
+diff -urN galib246/ga/gaconfig.h galib246-p/ga/gaconfig.h
 --- galib246/ga/gaconfig.h	2005-01-31 16:46:09.000000000 +0100
-+++ galib246_patche/ga/gaconfig.h	2005-03-14 16:55:48.000000000 +0100
++++ galib246-p/ga/gaconfig.h	2005-04-01 17:11:47.000000000 +0200
 @@ -365,7 +365,7 @@
  #define GALIB_USE_PID
  #define GALIB_USE_EMPTY_TEMPLATES
@@ -24,14 +10,14 @@ diff -ruN galib246/ga/gaconfig.h galib246_patche/ga/gaconfig.h
  #define GALIB_USE_ANSI_HEADERS
  #define GALIB_USE_STD_NAMESPACE
  #define GALIB_USE_COMP_OPERATOR_TEMPLATES
-diff -ruN galib246/ga/gaid.h galib246_patche/ga/gaid.h
+diff -urN galib246/ga/gaid.h galib246-p/ga/gaid.h
 --- galib246/ga/gaid.h	1999-11-11 19:56:03.000000000 +0100
-+++ galib246_patche/ga/gaid.h	2005-03-14 16:56:05.000000000 +0100
++++ galib246-p/ga/gaid.h	2005-04-01 17:10:39.000000000 +0200
 @@ -53,6 +53,7 @@
    int sameClass(const GAID &b) const {return(classID() == b.classID());} 
    virtual const char * className() const {return "no class";} 
    virtual int classID() const {return 0;}
-+  virtual ~GAID() {};
++  virtual ~GAID() {}
  };
  
  

@@ -1,11 +1,11 @@
 Summary:	A C++ Library of Genetic Algorithm Components
 Summary(pl):	Biblioteka C++ funkcji do algorytmów genetycznych
 Name:		galib
-Version:	245
+Version:	246pre2
 Release:	1
 License:	MIT (base library), GPL (GNU portions in examples)
 Group:		Libraries
-Source0:	ftp://lancet.mit.edu/pub/ga/%{name}%{version}.tar.gz
+Source0:	http://lancet.mit.edu/ga/dist/%{name}%{version}.tgz
 # Source0-md5:	5a19b7692c3c18741cc0a120d36de165
 URL:		http://lancet.mit.edu/ga/
 BuildRequires:	libstdc++-devel

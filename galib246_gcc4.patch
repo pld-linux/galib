@@ -1,0 +1,35 @@
+diff -urN galib246/ga/gaconfig.h galib246_patched/ga/gaconfig.h
+--- galib246/ga/gaconfig.h	2005-01-31 16:46:09.000000000 +0100
++++ galib246_patched/ga/gaconfig.h	2005-03-13 16:20:49.000000000 +0100
+@@ -365,7 +365,7 @@
+ #define GALIB_USE_PID
+ #define GALIB_USE_EMPTY_TEMPLATES
+ #define GALIB_NEED_INSTANTIATION_PREFIX
+-#if __GNUC__ == 3
++#if __GNUC__ == 4
+ #define GALIB_USE_ANSI_HEADERS
+ #define GALIB_USE_STD_NAMESPACE
+ #define GALIB_USE_COMP_OPERATOR_TEMPLATES
+diff -urN galib246/ga/gaid.h galib246_patched/ga/gaid.h
+--- galib246/ga/gaid.h	1999-11-11 19:56:03.000000000 +0100
++++ galib246_patched/ga/gaid.h	2005-03-13 16:29:05.000000000 +0100
+@@ -53,6 +53,7 @@
+   int sameClass(const GAID &b) const {return(classID() == b.classID());} 
+   virtual const char * className() const {return "no class";} 
+   virtual int classID() const {return 0;}
++  virtual ~GAID(){};
+ };
+ 
+ 
+diff -urN galib246/ga/makefile.sources galib246_patched/ga/makefile.sources
+--- galib246/ga/makefile.sources	2000-02-03 21:00:46.000000000 +0100
++++ galib246_patched/ga/makefile.sources	2005-03-13 16:14:53.000000000 +0100
+@@ -7,7 +7,7 @@
+  GABinStr.h gabincvt.h GAAllele.h GAArray.h GANode.h \
+  GA1DBinStrGenome.h GA2DBinStrGenome.h GA3DBinStrGenome.h GABin2DecGenome.h \
+  GA1DArrayGenome.h GA2DArrayGenome.h GA3DArrayGenome.h \
+- GAStringGenome.h GARealGenome.h \
++ GAStringGenome.h GARealGenome.h  std_stream.h \
+  GATreeBASE.h GATree.h GATreeGenome.h GAListBASE.h GAList.h GAListGenome.h 
+ SRCS= garandom.C gaerror.C GAParameter.C GAStatistics.C \
+  GABaseGA.C GASStateGA.C GASimpleGA.C GAIncGA.C GADemeGA.C GADCrowdingGA.C \

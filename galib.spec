@@ -1,5 +1,5 @@
 Summary:	A C++ library of genetic algorithm components
-Summary(pl):	Biblioteka C++ funkcji do algorytm體 genetycznych
+Summary(pl.UTF-8):   Biblioteka C++ funkcji do algorytm贸w genetycznych
 Name:		galib
 Version:	246
 Release:	1
@@ -21,18 +21,18 @@ documentation includes an extensive overview of how to implement a
 genetic algorithm as well as examples illustrating customizations to
 the GAlib classes.
 
-%description -l pl
-GAlib zawiera zbi髍 obiekt體 C++ do algorytm體 genetycznych.
-Biblioteka zawiera narz阣zia do u縴wania algorytm體 genetycznych do
-wykonywania optymalizacji w dowolnym programie C++ przy u縴ciu
-dowolnej reprezentacji i operator體 genetycznych. Dokumentacja
+%description -l pl.UTF-8
+GAlib zawiera zbi贸r obiekt贸w C++ do algorytm贸w genetycznych.
+Biblioteka zawiera narz臋dzia do u偶ywania algorytm贸w genetycznych do
+wykonywania optymalizacji w dowolnym programie C++ przy u偶yciu
+dowolnej reprezentacji i operator贸w genetycznych. Dokumentacja
 zawiera obszerny opis sposobu implementacji algorytmu genetycznego, a
-tak縠 przyk砤dy ilustruj眂e dostosowanie klas GAliba do swoich
+tak偶e przyk艂ady ilustruj膮ce dostosowanie klas GAliba do swoich
 potrzeb.
 
 %package devel
 Summary:	Header files for GAlib
-Summary(pl):	Pliki nag丑wkowe biblioteki GAlib
+Summary(pl.UTF-8):   Pliki nag艂贸wkowe biblioteki GAlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -40,19 +40,19 @@ Requires:	libstdc++-devel
 %description devel
 This package contains header files for GAlib.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag丑wkowe biblioteki GAlib.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag艂贸wkowe biblioteki GAlib.
 
 %package static
 Summary:	Static version of GAlib
-Summary(pl):	Statyczna wersja biblioteki GAlib
+Summary(pl.UTF-8):   Statyczna wersja biblioteki GAlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static version of GAlib.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki GAlib.
 
 %prep

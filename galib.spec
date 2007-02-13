@@ -1,5 +1,5 @@
 Summary:	A C++ library of genetic algorithm components
-Summary(pl.UTF-8):   Biblioteka C++ funkcji do algorytmów genetycznych
+Summary(pl.UTF-8):	Biblioteka C++ funkcji do algorytmów genetycznych
 Name:		galib
 Version:	246
 Release:	1
@@ -32,7 +32,7 @@ potrzeb.
 
 %package devel
 Summary:	Header files for GAlib
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki GAlib
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki GAlib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -45,7 +45,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki GAlib.
 
 %package static
 Summary:	Static version of GAlib
-Summary(pl.UTF-8):   Statyczna wersja biblioteki GAlib
+Summary(pl.UTF-8):	Statyczna wersja biblioteki GAlib
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 

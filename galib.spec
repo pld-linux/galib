@@ -1,13 +1,13 @@
 Summary:	A C++ library of genetic algorithm components
 Summary(pl.UTF-8):	Biblioteka C++ funkcji do algorytmów genetycznych
 Name:		galib
-Version:	246
+Version:	247
 Release:	1
 License:	MIT (base library), GPL (GNU portions in examples)
 Group:		Libraries
 Source0:	http://lancet.mit.edu/ga/dist/%{name}%{version}.tgz
+# Source0-md5:	2b6a28fd06d4c7c4d0bb39c92b2b376c
 Patch0:		%{name}246_gcc4.patch
-# Source0-md5:	e61efce22161907449b07f8472eb7c7c
 URL:		http://lancet.mit.edu/ga/
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4d
@@ -73,7 +73,8 @@ install -d $RPM_BUILD_ROOT%{_libdir}
 %{__make} install -C ga \
 	LIB="libga.la" \
 	INSTALL="libtool --mode=install install" \
-	DESTDIR=$RPM_BUILD_ROOT%{_prefix}
+	DESTDIR=$RPM_BUILD_ROOT%{_prefix} \
+	LIB_DEST_DIR=$RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT

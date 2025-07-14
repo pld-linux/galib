@@ -57,7 +57,7 @@ Statyczna wersja biblioteki GAlib.
 
 %prep
 %setup -q -n %{name}%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} -C ga \
